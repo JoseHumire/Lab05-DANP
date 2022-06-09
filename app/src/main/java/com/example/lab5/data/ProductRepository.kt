@@ -9,4 +9,10 @@ class ProductRepository(private val productDao: ProductDao) {
     suspend fun addProduct(product: Product) {
         productDao.addProduct(product)
     }
+    suspend fun deleteProduct(product: Product){
+        productDao.deleteProduct(product)
+    }
+    suspend fun deleteAllProducts(){
+        productDao.deleteAllProducts()
+    }
 }
